@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics;
-
+// ReSharper disable CheckNamespace
 namespace CnoomUnityTool.UniEvent.Runtime
 {
 	internal static class UniLogger

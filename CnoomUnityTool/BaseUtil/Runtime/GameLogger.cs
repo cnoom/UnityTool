@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
+// ReSharper disable CheckNamespace
 
 namespace CnoomUnityTool.BaseUtil.Runtime
 {

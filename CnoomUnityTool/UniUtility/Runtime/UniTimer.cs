@@ -1,4 +1,4 @@
-﻿
+﻿// ReSharper disable CheckNamespace
 namespace CnoomUnityTool.UniUtility.Runtime
 {
 	public sealed class UniTimer

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using CnoomUnityTool.UniEvent.Runtime;
 using UnityEngine;
-
+// ReSharper disable CheckNamespace
 namespace CnoomUnityTool.UniEvent.Runtime
 {
 	public static class UniEvent

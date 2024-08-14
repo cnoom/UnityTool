@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime;
-using ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime;
-using UnityEditor.PackageManager;
-using LogLevel = CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime.LogLevel;
-
+using CnoomUnityTool.BaseUtil.Runtime;
+// ReSharper disable CheckNamespace
 namespace CnoomUnityTool.UniMachine.Runtime
 {
 	public class StateMachine

@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
-
+// ReSharper disable CheckNamespace
 namespace CnoomUnityTool.UniEvent.Runtime
 {
 	internal class UniEventDriver : MonoBehaviour
 	{
 		void Update()
 		{
-			ThirdParty.UnityTool.CnoomUnityTool.UniEvent.Runtime.UniEvent.Update();
+			UniEvent.Update();
 		}
 	}
 }

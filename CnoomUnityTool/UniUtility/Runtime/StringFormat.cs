@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text;
-
+// ReSharper disable CheckNamespace
 namespace CnoomUnityTool.UniUtility.Runtime
 {
 	public static class StringFormat

@@ -1,4 +1,4 @@
-﻿
+﻿// ReSharper disable CheckNamespace
 namespace CnoomUnityTool.UniMachine.Runtime
 {
 	public interface IStateNode
