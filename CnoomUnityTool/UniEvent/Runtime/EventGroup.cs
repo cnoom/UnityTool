@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using CnoomUnityTool.UniEvent.Runtime;
 
-namespace CnoomUnityTool.UniEvent.Runtime
+namespace CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.UniEvent.Runtime
 {
 	public class EventGroup
 	{
@@ -19,7 +20,7 @@ namespace CnoomUnityTool.UniEvent.Runtime
 			if (_cachedListener[eventType].Contains(listener) == false)
 			{
 				_cachedListener[eventType].Add(listener);
-				UniEvent.AddListener(eventType, listener);
+				global::CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.UniEvent.Runtime.UniEvent.AddListener(eventType, listener);
 			}
 			else
 			{
@@ -38,7 +39,7 @@ namespace CnoomUnityTool.UniEvent.Runtime
 				eventType = pair.Key;
 				for (int i = 0; i < pair.Value.Count; i++)
 				{
-					UniEvent.RemoveListener(eventType, pair.Value[i]);
+					global::CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.UniEvent.Runtime.UniEvent.RemoveListener(eventType, pair.Value[i]);
 				}
 				pair.Value.Clear();
 			}

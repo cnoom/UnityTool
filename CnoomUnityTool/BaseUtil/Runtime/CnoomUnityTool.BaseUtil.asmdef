@@ -1,3 +1,14 @@
 {
-	"name": "CnoomUnityTool.BaseUtil"
+    "name": "BaseUtil",
+    "rootNamespace": "CnoomUnityTool",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

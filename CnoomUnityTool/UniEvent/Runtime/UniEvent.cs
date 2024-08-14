@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using CnoomUnityTool.UniEvent.Runtime;
 using UnityEngine;
 
-namespace CnoomUnityTool.UniEvent.Runtime
+namespace CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.UniEvent.Runtime
 {
 	public static class UniEvent
 	{

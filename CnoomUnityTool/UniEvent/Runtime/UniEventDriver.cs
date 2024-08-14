@@ -6,7 +6,7 @@ namespace CnoomUnityTool.UniEvent.Runtime
 	{
 		void Update()
 		{
-			UniEvent.Update();
+			ThirdParty.UnityTool.CnoomUnityTool.UniEvent.Runtime.UniEvent.Update();
 		}
 	}
 }

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime;
 using ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime;
 using UnityEditor.PackageManager;
-using LogLevel = ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime.LogLevel;
+using LogLevel = CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime.LogLevel;
 
 namespace CnoomUnityTool.CnoomUnityTool.UniMachine.Runtime
 {

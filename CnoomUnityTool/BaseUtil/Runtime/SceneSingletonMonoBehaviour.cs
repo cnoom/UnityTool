@@ -4,52 +4,53 @@ namespace ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime
 {
     public class SceneSingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
     {
-        private static T _instance;
-        private static object _lock = new object();
+        private static T instance;
+        // ReSharper disable once StaticMemberInGenericType
+        private static readonly object Lock = new object();
 
         public static T Instance
         {
             get
             {
-                if(_instance == null)
+                if(instance == null)
                 {
-                    lock (_lock)
+                    lock (Lock)
                     {
-                        if(_instance == null)
+                        if(instance == null)
                         {
-                            _instance = FindObjectOfType<T>();
+                            instance = FindObjectOfType<T>();
 
                             if(FindObjectOfType<T>() == null)
                             {
                                 GameObject singleton = new GameObject();
-                                _instance = singleton.AddComponent<T>();
+                                instance = singleton.AddComponent<T>();
                                 singleton.name = typeof(T).Name + " (Singleton)";
                             }
                         }
                     }
                 }
 
-                return _instance;
+                return instance;
             }
         }
 
         protected virtual void Awake()
         {
-            if(_instance != null && _instance != this)
+            if(instance != null && instance != this)
             {
                 Destroy(gameObject);
             }
             else
             {
-                _instance = this as T;
+                instance = this as T;
             }
         }
 
         protected virtual void OnDestroy()
         {
-            if(_instance == this)
+            if(instance == this)
             {
-                _instance = null;
+                instance = null;
             }
         }
     }
