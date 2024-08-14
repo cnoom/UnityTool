@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace CnoomUnityTool.CnoomUnityTool.UniMachine.Runtime
+namespace CnoomUnityTool.UniMachine.Runtime
 {
 	internal static class UniLogger
 	{

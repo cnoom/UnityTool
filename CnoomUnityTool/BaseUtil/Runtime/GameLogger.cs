@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime
+namespace CnoomUnityTool.BaseUtil.Runtime
 {
     public enum LogLevel
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace UniFramework.Utility
+namespace CnoomUnityTool.UniUtility.Runtime
 {
 	public sealed class UniTimer
 	{

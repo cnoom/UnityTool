@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UniFramework.Utility
+namespace CnoomUnityTool.UniUtility.Runtime
 {
     internal struct BitMask64
     {

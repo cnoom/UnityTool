@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace UniFramework.Utility
-{
+namespace CnoomUnityTool.UniUtility.Runtime
 	public static class StringConvert
 	{
 		/// <summary>

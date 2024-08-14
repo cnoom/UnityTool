@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace UniFramework.Utility
+namespace CnoomUnityTool.UniUtility.Runtime
 {
 	public static class StringFormat
 	{

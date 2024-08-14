@@ -1,6 +1,6 @@
 {
-    "name": "CnoomUnityTool.UniMachine",
-    "rootNamespace": "",
+    "name": "UniMachine",
+    "rootNamespace": "CnoomUnityTool",
     "references": [
         "GUID:f6ae643f2bf73c240b9815d9afac9451"
     ],

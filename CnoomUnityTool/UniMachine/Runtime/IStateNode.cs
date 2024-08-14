@@ -1,5 +1,5 @@
 ﻿
-namespace CnoomUnityTool.CnoomUnityTool.UniMachine.Runtime
+namespace CnoomUnityTool.UniMachine.Runtime
 {
 	public interface IStateNode
 	{

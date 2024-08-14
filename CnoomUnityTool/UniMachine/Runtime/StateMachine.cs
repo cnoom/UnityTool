@@ -5,7 +5,7 @@ using ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime;
 using UnityEditor.PackageManager;
 using LogLevel = CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime.LogLevel;
 
-namespace CnoomUnityTool.CnoomUnityTool.UniMachine.Runtime
+namespace CnoomUnityTool.UniMachine.Runtime
 {
 	public class StateMachine
 	{

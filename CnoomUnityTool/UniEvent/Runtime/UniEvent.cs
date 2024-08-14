@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CnoomUnityTool.UniEvent.Runtime;
 using UnityEngine;
 
-namespace CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.UniEvent.Runtime
+namespace CnoomUnityTool.UniEvent.Runtime
 {
 	public static class UniEvent
 	{

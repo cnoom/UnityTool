@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-namespace ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime
+namespace CnoomUnityTool.BaseUtil.Runtime
 {
     public abstract class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
     {

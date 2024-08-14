@@ -1,5 +1,5 @@
 ﻿
-namespace CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.UniEvent.Runtime
+namespace CnoomUnityTool.UniEvent.Runtime
 {
 	public interface IEventMessage
 	{

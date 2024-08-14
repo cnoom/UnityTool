@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime
+namespace CnoomUnityTool.BaseUtil.Runtime
 {
     public class SceneSingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
     {
