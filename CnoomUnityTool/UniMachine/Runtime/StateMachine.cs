@@ -129,7 +129,7 @@ namespace CnoomUnityTool.CnoomUnityTool.UniMachine.Runtime
 				return;
 			}
 
-			GameLogger.Log<StateMachine>($"{_curNode.GetType().FullName} --> {node.GetType().FullName}",LogLevel.Error);
+			GameLogger.Log<StateMachine>($"{_curNode.GetType().FullName} --> {node.GetType().FullName}");
 			_preNode = _curNode;
 			_curNode.OnExit();
 			_curNode = node;
