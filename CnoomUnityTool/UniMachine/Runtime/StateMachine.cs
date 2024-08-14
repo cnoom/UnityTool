@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ThirdParty.UnityTool.CnoomUnityTool.BaseUtil.Runtime;
 
 namespace CnoomUnityTool.CnoomUnityTool.UniMachine.Runtime
 {
@@ -96,7 +97,7 @@ namespace CnoomUnityTool.CnoomUnityTool.UniMachine.Runtime
 			}
 			else
 			{
-				UniLogger.Error($"State node already existed : {nodeName}");
+				GameLogger.Log<StateMachine>($"State node already existed : {nodeName}",LogLevel.Error);
 			}
 		}
 
@@ -122,11 +123,11 @@ namespace CnoomUnityTool.CnoomUnityTool.UniMachine.Runtime
 			IStateNode node = TryGetNode(nodeName);
 			if (node == null)
 			{
-				UniLogger.Error($"Can not found state node : {nodeName}");
+				GameLogger.Log<StateMachine>($"Can not found state node : {nodeName}",LogLevel.Error);
 				return;
 			}
 
-			UniLogger.Log($"{_curNode.GetType().FullName} --> {node.GetType().FullName}");
+			GameLogger.Log<StateMachine>($"{_curNode.GetType().FullName} --> {node.GetType().FullName}",LogLevel.Error);
 			_preNode = _curNode;
 			_curNode.OnExit();
 			_curNode = node;
@@ -157,7 +158,7 @@ namespace CnoomUnityTool.CnoomUnityTool.UniMachine.Runtime
 			}
 			else
 			{
-				UniLogger.Warning($"Not found blackboard value : {key}");
+				GameLogger.Log<StateMachine>($"Not found blackboard value : {key}",LogLevel.Error);
 				return null;
 			}
 		}
