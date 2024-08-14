@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Utils
+namespace CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.UniUtility.Runtime
 {
     public class Singleton<T>
     {

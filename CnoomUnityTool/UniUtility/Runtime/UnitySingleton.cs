@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-namespace Utils
+namespace CnoomUnityTool.ThirdParty.UnityTool.CnoomUnityTool.UniUtility.Runtime
 {
     public abstract class UnitySingleton<T> : MonoBehaviour where T : UnitySingleton<T>
     {
