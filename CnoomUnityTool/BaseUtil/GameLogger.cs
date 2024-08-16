@@ -65,8 +65,6 @@ namespace CnoomUnityTool.BaseUtil
             return logLevel != LogLevel.Error;
         }
         #endif
-
-
         // ReSharper disable Unity.PerformanceAnalysis
         public static void EditorLog<TObject>(string message)
         {

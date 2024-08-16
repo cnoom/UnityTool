@@ -24,6 +24,5 @@ namespace CnoomUnityTool.Extensions
         {
             return new Vector2(self.x, self.y + y);
         }
-
     }
 }

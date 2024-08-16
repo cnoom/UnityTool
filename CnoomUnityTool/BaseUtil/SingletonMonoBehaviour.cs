@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+
 // ReSharper disable CheckNamespace
 namespace CnoomUnityTool.BaseUtil
 {
@@ -7,7 +8,7 @@ namespace CnoomUnityTool.BaseUtil
         private static T instance;
         // ReSharper disable once StaticMemberInGenericType
         private static readonly object Lock = new object();
-        
+
         public static T Instance
         {
             get

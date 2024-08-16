@@ -1,16 +1,16 @@
 {
-    "name": "UniMachine",
-    "rootNamespace": "CnoomUnityTool",
-    "references": [
-        "GUID:f6ae643f2bf73c240b9815d9afac9451"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "UniMachine",
+  "rootNamespace": "CnoomUnityTool",
+  "references": [
+    "GUID:f79a1749cffd7da40b98caaa57e26487"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

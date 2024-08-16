@@ -1,7 +1,8 @@
 ﻿// ReSharper disable CheckNamespace
+
 namespace CnoomUnityTool.UniEvent
 {
-	public interface IEventMessage
-	{
-	}
+    public interface IEventMessage
+    {
+    }
 }

@@ -1,21 +1,23 @@
 ﻿using System.Diagnostics;
+using Debug = UnityEngine.Debug;
+
 // ReSharper disable CheckNamespace
 namespace CnoomUnityTool.UniEvent
 {
-	internal static class UniLogger
-	{
-		[Conditional("DEBUG")]
-		public static void Log(string info)
-		{
-			UnityEngine.Debug.Log(info);
-		}
-		public static void Warning(string info)
-		{
-			UnityEngine.Debug.LogWarning(info);
-		}
-		public static void Error(string info)
-		{
-			UnityEngine.Debug.LogError(info);
-		}
-	}
+    internal static class UniLogger
+    {
+        [Conditional("DEBUG")]
+        public static void Log(string info)
+        {
+            Debug.Log(info);
+        }
+        public static void Warning(string info)
+        {
+            Debug.LogWarning(info);
+        }
+        public static void Error(string info)
+        {
+            Debug.LogError(info);
+        }
+    }
 }
