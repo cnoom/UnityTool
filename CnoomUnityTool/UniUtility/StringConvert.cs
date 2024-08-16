@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 // ReSharper disable CheckNamespace
-namespace CnoomUnityTool.UniUtility.Runtime
+namespace CnoomUnityTool.UniUtility
 {
     public static class StringConvert
     {

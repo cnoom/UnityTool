@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using CnoomUnityTool.UniEvent.Runtime;
+using CnoomUnityTool.UniEvent;
 // ReSharper disable CheckNamespace
-namespace CnoomUnityTool.UniEvent.Runtime
+namespace CnoomUnityTool.UniEvent
 {
 	public class EventGroup
 	{

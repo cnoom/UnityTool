@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using CnoomUnityTool.BaseUtil;
 // ReSharper disable CheckNamespace
-namespace CnoomUnityTool.UniMachine.Runtime
+namespace CnoomUnityTool.UniMachine
 {
 	public class StateMachine
 	{

@@ -1,6 +1,6 @@
 ﻿using System;
 // ReSharper disable CheckNamespace
-namespace CnoomUnityTool.UniUtility.Runtime
+namespace CnoomUnityTool.UniUtility
 {
     public class Singleton<T>
     {

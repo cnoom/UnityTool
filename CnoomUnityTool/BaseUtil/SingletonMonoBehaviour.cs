@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 // ReSharper disable CheckNamespace
-namespace CnoomUnityTool.BaseUtil.Runtime
+namespace CnoomUnityTool.BaseUtil
 {
     public abstract class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
     {

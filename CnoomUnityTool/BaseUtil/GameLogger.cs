@@ -2,7 +2,7 @@
 using UnityEngine;
 // ReSharper disable CheckNamespace
 
-namespace CnoomUnityTool.BaseUtil.Runtime
+namespace CnoomUnityTool.BaseUtil
 {
     public enum LogLevel
     {

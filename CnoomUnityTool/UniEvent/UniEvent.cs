@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using CnoomUnityTool.UniEvent.Runtime;
+using CnoomUnityTool.UniEvent;
 using UnityEngine;
 // ReSharper disable CheckNamespace
 namespace CnoomUnityTool.UniEvent.Runtime
