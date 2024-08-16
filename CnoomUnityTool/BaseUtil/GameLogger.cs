@@ -28,7 +28,6 @@ namespace CnoomUnityTool.BaseUtil
         {
             return logLevel != LogLevel.Debug;
         }
-
         [MenuItem("插件/日志输出/信息级别")]
         private static void InfoLogLevel()
         {
@@ -40,7 +39,6 @@ namespace CnoomUnityTool.BaseUtil
         {
             return logLevel != LogLevel.Info;
         }
-
         [MenuItem("插件/日志输出/警告级别")]
         private static void WarningLogLevel()
         {
@@ -52,7 +50,6 @@ namespace CnoomUnityTool.BaseUtil
         {
             return logLevel != LogLevel.Warning;
         }
-
         [MenuItem("插件/日志输出/报错级别")]
         private static void ErrorLogLevel()
         {
@@ -96,11 +93,6 @@ namespace CnoomUnityTool.BaseUtil
         private static void ErrorLog(string message, string source = "")
         {
             Debug.LogError($"[ERROR] {source} {message}");
-        }
-
-        public static void Log(string message, string source)
-        {
-            Log(message, LogLevel.Info, source);
         }
 
         public static void Log<TObject>(string message, LogLevel level = LogLevel.Info)
