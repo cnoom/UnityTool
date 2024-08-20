@@ -6,6 +6,11 @@ namespace CnoomUnityTool.Extensions
 {
     public static class Vector3Extension
     {
+        public static Vector3 UniValue(float value)
+        {
+            return new Vector3(value, value, value);
+        }
+
         public static Vector3 SetX(this Vector3 self, float x)
         {
             return new Vector3(x, self.y, self.z);

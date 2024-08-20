@@ -1,9 +1,16 @@
+// ReSharper disable CheckNamespace
+
 using UnityEngine;
 
 namespace CnoomUnityTool.Extensions
 {
     public static class Vector2Extension
     {
+        public static Vector2 UniValue(float value)
+        {
+            return new Vector2(value, value);
+        }
+
         public static Vector2 SetX(this Vector2 self, float x)
         {
             return new Vector2(x, self.y);

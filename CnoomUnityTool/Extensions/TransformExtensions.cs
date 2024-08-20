@@ -1,3 +1,5 @@
+// ReSharper disable CheckNamespace
+
 using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -18,7 +20,7 @@ namespace CnoomUnityTool.Extensions
             return childTransform.gameObject.GetComponent<T>();
         }
 
-        public static T FindGetInChildren<T>(this Transform self, string path) 
+        public static T FindGetInChildren<T>(this Transform self, string path)
         {
             Transform childTransform = self.Find(path);
             return childTransform.gameObject.GetComponentInChildren<T>();
