@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CnoomUnityTool.Extensions
+{
+    public static class ListExtensions
+    {
+        /// <summary>
+        /// 筛选出满足条件的集合
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="condition"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static List<T> FindByCondition<T>(this List<T> list, Func<T, bool> condition)
+        {
+            return list.Where(condition).ToList();
+        }
+        
+        /// <summary>
+        /// 筛选出满足条件的第一个物体
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="condition"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static T FindByConditionSingle<T>(this List<T> list, Func<T, bool> condition,T defaultValue = default)
+        {
+            var item =  list.SingleOrDefault(item => condition(item));
+            return item == null ? defaultValue : default;
+        }
+    }
+}
