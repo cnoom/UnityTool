@@ -28,7 +28,7 @@ namespace CnoomUnityTool.Extensions
         public static T FindByConditionSingle<T>(this List<T> list, Func<T, bool> condition,T defaultValue = default)
         {
             var item =  list.SingleOrDefault(item => condition(item));
-            return item == null ? defaultValue : default;
+            return item == null ? defaultValue : item;
         }
     }
 }
