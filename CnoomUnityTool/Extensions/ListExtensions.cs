@@ -1,4 +1,6 @@
-﻿using System;
+﻿// ReSharper disable CheckNamespace
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,17 +19,18 @@ namespace CnoomUnityTool.Extensions
         {
             return list.Where(condition).ToList();
         }
-        
+
         /// <summary>
         /// 筛选出满足条件的第一个物体
         /// </summary>
         /// <param name="list"></param>
         /// <param name="condition"></param>
+        /// <param name="defaultValue">默认值</param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static T FindByConditionSingle<T>(this List<T> list, Func<T, bool> condition,T defaultValue = default)
+        public static T FindByConditionSingle<T>(this List<T> list, Func<T, bool> condition, T defaultValue = default)
         {
-            var item =  list.SingleOrDefault(item => condition(item));
+            var item = list.SingleOrDefault(condition);
             return item == null ? defaultValue : item;
         }
     }
