@@ -33,24 +33,5 @@ namespace CnoomUnityTool.Extensions
             var item = list.SingleOrDefault(condition);
             return item == null ? defaultValue : item;
         }
-
-        /// <summary>
-        /// 获取满足条件的第一个物体，没有就添加一个默认物体到列表
-        /// </summary>
-        /// <param name="list"></param>
-        /// <param name="condition"></param>
-        /// <param name="defaultValue"></param>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public static T GetOrAddCondition<T>(this List<T> list, Func<T, bool> condition, T defaultValue)
-        {
-            var item = list.SingleOrDefault(condition);
-            if(item == null)
-            {
-                item = defaultValue;
-                list.Add(item);
-            }
-            return item;
-        }
     }
 }
