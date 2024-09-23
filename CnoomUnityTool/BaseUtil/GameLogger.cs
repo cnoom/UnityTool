@@ -87,12 +87,12 @@ namespace CnoomUnityTool.BaseUtil
 
         private static void WarningLog(string message, string source = "")
         {
-            Debug.LogWarning($"[WARNING] {source} {message}");
+            Debug.LogWarning($"<color=yellow>[WARNING] {source} {message}</color>");
         }
 
         private static void ErrorLog(string message, string source = "")
         {
-            Debug.LogError($"[ERROR] {source} {message}");
+            Debug.LogError($"<color=red>[ERROR] {source} {message}</color>");
         }
 
         public static void Log<TObject>(string message, LogLevel level = LogLevel.Info)
