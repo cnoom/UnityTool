@@ -11,8 +11,10 @@ namespace CnoomUnityTool.UniMachine
         private readonly Dictionary<string, IStateNode> _nodes = new Dictionary<string, IStateNode>(100);
         private IStateNode _curNode;
         private IStateNode _preNode;
-
-
+        /// <summary>
+        /// 转换节点时是否存在输出
+        /// </summary>
+        public bool HasLog = true;
         private StateMachine() { }
         public StateMachine(object owner)
         {
@@ -121,8 +123,7 @@ namespace CnoomUnityTool.UniMachine
                 LogUtil.Log<StateMachine>($"Can not found state node : {nodeName}", LogLevel.Error);
                 return;
             }
-
-            LogUtil.Log<StateMachine>($"{_curNode.GetType().FullName} ---> {node.GetType().FullName}");
+            if(HasLog) LogUtil.Log<StateMachine>($"{_curNode.GetType().FullName} ---> {node.GetType().FullName}");
             _preNode = _curNode;
             _curNode.OnExit();
             _curNode = node;
