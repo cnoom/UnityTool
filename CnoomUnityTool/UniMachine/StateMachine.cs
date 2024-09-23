@@ -92,7 +92,7 @@ namespace CnoomUnityTool.UniMachine
             }
             else
             {
-                GameLogger.Log<StateMachine>($"State node already existed : {nodeName}", LogLevel.Error);
+                LogUtil.Log<StateMachine>($"State node already existed : {nodeName}", LogLevel.Error);
             }
         }
 
@@ -118,11 +118,11 @@ namespace CnoomUnityTool.UniMachine
             IStateNode node = TryGetNode(nodeName);
             if(node == null)
             {
-                GameLogger.Log<StateMachine>($"Can not found state node : {nodeName}", LogLevel.Error);
+                LogUtil.Log<StateMachine>($"Can not found state node : {nodeName}", LogLevel.Error);
                 return;
             }
 
-            GameLogger.Log<StateMachine>($"{_curNode.GetType().FullName} ---> {node.GetType().FullName}");
+            LogUtil.Log<StateMachine>($"{_curNode.GetType().FullName} ---> {node.GetType().FullName}");
             _preNode = _curNode;
             _curNode.OnExit();
             _curNode = node;
@@ -151,7 +151,7 @@ namespace CnoomUnityTool.UniMachine
             {
                 return value;
             }
-            GameLogger.Log<StateMachine>($"Not found blackboard value : {key}", LogLevel.Error);
+            LogUtil.Log<StateMachine>($"Not found blackboard value : {key}", LogLevel.Error);
             return null;
         }
 

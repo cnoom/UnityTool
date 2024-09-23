@@ -12,7 +12,7 @@ namespace CnoomUnityTool.BaseUtil
         Error
     }
 
-    public static class GameLogger
+    public static class LogUtil
     {
         private static LogLevel logLevel;
         #if UNITY_EDITOR
@@ -21,7 +21,7 @@ namespace CnoomUnityTool.BaseUtil
         private static void DebugLevel()
         {
             logLevel = LogLevel.Debug;
-            Debug.Log($"{nameof(GameLogger)}当前输出级别:{logLevel}");
+            Debug.Log($"{nameof(LogUtil)}当前输出级别:{logLevel}");
         }
         [MenuItem("插件/日志输出/调试级别", true)]
         private static bool DebugLevelIsMenuItem()
@@ -32,7 +32,7 @@ namespace CnoomUnityTool.BaseUtil
         private static void InfoLogLevel()
         {
             logLevel = LogLevel.Info;
-            Debug.Log($"{nameof(GameLogger)}当前输出级别:{logLevel}");
+            Debug.Log($"{nameof(LogUtil)}当前输出级别:{logLevel}");
         }
         [MenuItem("插件/日志输出/信息级别", true)]
         private static bool InfoLogLevelIsMenuItem()
@@ -43,7 +43,7 @@ namespace CnoomUnityTool.BaseUtil
         private static void WarningLogLevel()
         {
             logLevel = LogLevel.Warning;
-            Debug.Log($"{nameof(GameLogger)}当前输出级别:{logLevel}");
+            Debug.Log($"{nameof(LogUtil)}当前输出级别:{logLevel}");
         }
         [MenuItem("插件/日志输出/警告级别", true)]
         private static bool WarningLogLevelIsMenuItem()
@@ -54,7 +54,7 @@ namespace CnoomUnityTool.BaseUtil
         private static void ErrorLogLevel()
         {
             logLevel = LogLevel.Error;
-            Debug.Log($"{nameof(GameLogger)}当前输出级别:{logLevel}");
+            Debug.Log($"{nameof(LogUtil)}当前输出级别:{logLevel}");
         }
         [MenuItem("插件/日志输出/报错级别", true)]
         private static bool ErrorLogLevelIsMenuItem()
