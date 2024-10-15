@@ -1,8 +1,14 @@
 ﻿{
   "name": "com.cnoom.unitytool",
-  "version": "1.0.0",
-  "description": "",
+  "displayName": "unitytool",
+  "version": "0.9.0",
+  "description": "较为全面且封装简单的unity库",
   "main": "index.js",
+  "private": true,
+  "author": {
+    "name": "cnoom",
+    "email": "cnoom@qq.com"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +16,6 @@
     "type": "git",
     "url": "https://github.com/cnoom/UnityTool.git"
   },
-  "private": true,
   "dependencies": {
     "com.unity.nuget.newtonsoft-json": "3.2.1"
   }
