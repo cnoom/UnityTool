@@ -48,4 +48,9 @@ int i =  s.GetInt(key:"yourkey",defaultVale:0)
 - [Vector2Extension](Runtime/Extensions/Vector2Extension.cs)
 - [Vector3Extension](Runtime/Extensions/Vector3Extension.cs)
 
+## [EventUtil](Runtime/EventUtils)
+事件工具集合
+- [TypeEventSystem](Runtime/EventUtils/TypeEventSystem.cs)
+类型事件系统,提供弱引用避免忘记取消订阅导致的问题
+
 
