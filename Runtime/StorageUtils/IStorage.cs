@@ -1,4 +1,6 @@
 ﻿
+using JetBrains.Annotations;
+
 namespace Cnoom.UnityTool.StorageUtils
 {
     public interface IStorage
@@ -23,7 +25,7 @@ namespace Cnoom.UnityTool.StorageUtils
 
         public string LoadString(string key, string defaultValue = "");
 
-        public T? LoadObject<T>(string key, T? defaultValue = default);
+        public T LoadObject<T>(string key, T defaultValue = default);
 
         #endregion
     
@@ -33,6 +35,6 @@ namespace Cnoom.UnityTool.StorageUtils
 
         public bool Exists(string key);
     
-        public static IStorage? Current { get; set; }
+        public static IStorage Current { get; set; }
     }
 }

@@ -38,7 +38,7 @@ namespace Cnoom.UnityTool.StorageUtils
             return TryGetStorageUtil().LoadString(storageUser.GetKey(key), defaultValue);
         }
 
-        public static T? GetObject<T>(this IStorageUser storageUser, string key, T? defaultValue = default)
+        public static T GetObject<T>(this IStorageUser storageUser, string key, T defaultValue = default)
         {
             return TryGetStorageUtil().LoadObject(storageUser.GetKey(key), defaultValue);
         }

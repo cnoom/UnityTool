@@ -11,7 +11,6 @@ namespace Cnoom.UnityTool.SingletonUtils
             {
                 if(instance == null)
                 {
-                    //ensure that only one thread can execute
                     lock (singletonLock)
                     {
                         if(instance == null)
@@ -39,7 +38,7 @@ namespace Cnoom.UnityTool.SingletonUtils
         }
         #region Fields
 
-        private static T? instance;
+        private static T instance;
         /// <summary>
         ///     线程锁
         /// </summary>

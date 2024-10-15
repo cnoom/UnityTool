@@ -69,7 +69,7 @@ namespace Cnoom.UnityTool.StorageUtils
             return PlayerPrefs.GetString(key, defaultValue);
         }
 
-        public T? LoadObject<T>(string key, T? defaultValue = default)
+        public T LoadObject<T>(string key, T defaultValue = default)
         {
             string json = PlayerPrefs.GetString(key);
             if(string.IsNullOrEmpty(json))
