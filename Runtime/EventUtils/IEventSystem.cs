@@ -1,6 +1,4 @@
-﻿using Unity.Plastic.Newtonsoft.Json.Serialization;
-
-namespace Cnoom.UnityTool.EventUtil
+﻿namespace Cnoom.UnityTool.EventUtils
 {
     public interface IEventSystem
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Cnoom.UnityTool.SingletonUtils;
 
-namespace Cnoom.UnityTool.EventUtil
+namespace Cnoom.UnityTool.EventUtils
 {
     /// <summary>
     /// 触发事件基类,可以在里面添加参数
