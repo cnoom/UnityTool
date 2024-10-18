@@ -6,5 +6,15 @@
         {
             return value ? 1 : 0;
         }
+
+        public static int IntReverse(this bool value)
+        {
+            return value.IntReverse(1);
+        }
+
+        public static int IntReverse(this bool value, int v)
+        {
+            return value ? v : -1;
+        }
     }
 }
