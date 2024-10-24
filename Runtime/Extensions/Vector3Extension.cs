@@ -39,6 +39,17 @@ namespace Cnoom.UnityTool.Extensions
             return new Vector3(self.x, self.y, self.z + z);
         }
 
+
+        public static Vector3 Add(this Vector3 self, float x, float y, float z)
+        {
+            return new Vector3(self.x + x, self.y + y, self.z + z);
+        }
+
+        public static Vector3 Add(this Vector3 self, Vector3 other)
+        {
+            return self.Add(other.x, other.y, other.z);
+        }
+
         public static float Distance2(this Vector3 self, Vector3 other)
         {
             float dx = other.x - self.x;

@@ -29,6 +29,17 @@ namespace Cnoom.UnityTool.Extensions
         {
             return new Vector2(self.x, self.y + y);
         }
+        
+        
+        public static Vector2 Add(this Vector2 self, float x, float y)
+        {
+            return new Vector2(self.x + x, self.y + y);
+        }
+
+        public static Vector2 Add(this Vector2 self,Vector2 other)
+        {
+            return self.Add(other.x, other.y);
+        }
 
         public static float Distance2(this Vector2 self, Vector2 other)
         {
