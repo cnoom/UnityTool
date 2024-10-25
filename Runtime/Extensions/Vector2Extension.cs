@@ -43,9 +43,12 @@ namespace Cnoom.UnityTool.Extensions
 
         public static float Distance2(this Vector2 self, Vector2 other)
         {
-            float dx = other.x - self.x;
-            float dy = other.y - self.y;
-            return dx * dx + dy * dy;
+            return (self - other).sqrMagnitude;
+        }
+        
+        public static float Distance(this Vector2 self, Vector2 other)
+        {
+            return (self - other).magnitude;
         }
     }
 }

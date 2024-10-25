@@ -57,5 +57,10 @@ namespace Cnoom.UnityTool.Extensions
             float dz = other.z - self.z;
             return dx * dx + dy * dy + dz * dz;
         }
+        
+        public static float Distance(this Vector3 self, Vector3 other)
+        {
+            return Mathf.Sqrt(Distance2(self, other));
+        }
     }
 }
