@@ -3,12 +3,11 @@ using Newtonsoft.Json;
 
 namespace Cnoom.UnityTool.StorageUtils
 {
-    public static class PlayerPrefsExtensions
+    public static class PlayerPrefsExtension
     {
         public static void SaveObject(this IPlayerPrefsUser storageUser, string key, object value, bool isSave = true, params JsonConverter[] converters)
         {
-
-            TryGetPlayerPrefsStorage().SaveObject(key, value, isSave, converters);
+            TryGetPlayerPrefsStorage().SaveObject(storageUser.GetKey(key), value, isSave, converters);
         }
 
         public static T GetObject<T>(this IPlayerPrefsUser storageUser, string key, T defaultValue = default, params JsonConverter[] converters)
