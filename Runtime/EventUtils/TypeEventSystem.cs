@@ -41,6 +41,10 @@ namespace Cnoom.UnityTool.EventUtils
     {
         private Dictionary<Type, List<Delegate>> eventHandlers = new Dictionary<Type, List<Delegate>>();
 
+        private TypeEventSystem()
+        {
+        }
+
         // 订阅事件
         public void Subscribe<TEventArgs>(Action<TEventArgs> handler) where TEventArgs : EventArgBase
         {
