@@ -17,6 +17,33 @@ namespace Cnoom.UnityTool.Extensions
         {
             return list.Where(condition).ToList();
         }
+
+        
+        /// <summary>
+        /// 根据指定条件移除列表中的元素。
+        /// </summary>
+        /// <typeparam name="T">列表中元素的类型。</typeparam>
+        /// <param name="list">要操作的列表。</param>
+        /// <param name="condition">用于确定是否应移除元素的条件。</param>
+        /// <returns>移除了符合条件元素后的新列表。</returns>
+        public static List<T> RemoveByCondition<T>(this List<T> list, Func<T,  bool> condition)
+        {
+            // 创建一个新的列表来存储元素
+            List<T> listToRemove = new List<T>(list);
+
+            // 遍历原始列表中的每个元素
+            foreach (T item in list)
+            {
+                // 如果元素符合条件，则将其添加到移除列表中
+                if (condition(item))
+                {
+                    listToRemove.Remove(item);
+                }
+            }
+            // 返回移除了符合条件元素后的新列表
+            return listToRemove;
+        }
+
         
         /// <summary>
         /// 根据指定条件查找列表中的单个元素，如果未找到则返回默认值。

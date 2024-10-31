@@ -28,6 +28,7 @@ namespace Cnoom.UnityTool.Extensions
                 array[i] = value;
             }
         }
+         
         /// <summary>
         /// 随机获取数组中的元素
         /// </summary>
