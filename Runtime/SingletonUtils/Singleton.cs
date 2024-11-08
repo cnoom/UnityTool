@@ -1,6 +1,6 @@
 namespace Cnoom.UnityTool.SingletonUtils
 {
-    public class Singleton<T> : ISingleton where T : Singleton<T>, new()
+    public class Singleton<T> : ISingleton where T : Singleton<T>
     {
 
         #region Properties
@@ -15,7 +15,7 @@ namespace Cnoom.UnityTool.SingletonUtils
                     {
                         if(instance == null)
                         {
-                            instance = new T();
+                            instance = SingletonCreator.CreateSingleton<T>();
                             instance.OnSingletonInit();
                         }
                     }

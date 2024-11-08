@@ -5,21 +5,18 @@ namespace Cnoom.UnityTool.StorageUtils
 {
     public static class StorageExtensions
     {
-
-        #region private
-
-        private static string GetKey(this IStorageUser storageUser, string key)
+        
+        public static string GetKey(this IStorageUser storageUser, string key)
         {
             return storageUser.GetType().FullName + key;
         }
 
-        private static IStorage TryGetStorageUtil()
+        public static IStorage TryGetStorageUtil()
         {
             if(IStorage.Current != null) return IStorage.Current;
             throw new NullReferenceException("IStorage.Current is null");
         }
 
-        #endregion
 
         #region 获取
 

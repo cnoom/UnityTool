@@ -26,7 +26,12 @@ namespace Cnoom.UnityTool.StorageUtils
 
         public void SaveObject(string key, object value, bool isSave = true)
         {
-            string json = JsonConvert.SerializeObject(value);
+            SaveObject(key, value, isSave,null);
+        }
+
+        public void SaveObject(string key, object value, bool isSave = true, params JsonConverter[] converters)
+        {
+            string json = JsonConvert.SerializeObject(value,converters);
             SaveString(key, json, isSave);
         }
 
@@ -77,6 +82,16 @@ namespace Cnoom.UnityTool.StorageUtils
                 return defaultValue;
             }
             return JsonConvert.DeserializeObject<T>(json);
+        }
+
+        public T LoadObject<T>(string key, T defaultValue = default, params JsonConverter[] converters)
+        {
+            string json = PlayerPrefs.GetString(key);
+            if(string.IsNullOrEmpty(json))
+            {
+                return defaultValue;
+            }
+            return JsonConvert.DeserializeObject<T>(json,converters);
         }
 
         #endregion

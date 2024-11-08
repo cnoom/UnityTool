@@ -12,6 +12,7 @@ namespace Cnoom.UnityTool.EventUtils
 
     }
 
+    // 定义一个弱引用委托，用于在事件处理程序中避免强引用导致的内存泄漏
     class WeakAction<TEventArgs> where TEventArgs : EventArgBase
     {
         private readonly WeakReference targetRef;
@@ -37,9 +38,14 @@ namespace Cnoom.UnityTool.EventUtils
         }
     }
 
+    // 事件系统的单例类，用于管理事件的订阅和触发
     public class TypeEventSystem : Singleton<TypeEventSystem>, IEventSystem
     {
         private Dictionary<Type, List<Delegate>> eventHandlers = new Dictionary<Type, List<Delegate>>();
+
+        private TypeEventSystem()
+        {
+        }
 
         // 订阅事件
         public void Subscribe<TEventArgs>(Action<TEventArgs> handler) where TEventArgs : EventArgBase
