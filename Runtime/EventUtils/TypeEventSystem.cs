@@ -28,7 +28,7 @@ namespace Cnoom.UnityTool.EventUtils
         {
             if(targetRef.IsAlive)
             {
-                ((Action<TEventArgs>)targetRef.Target)(eventArgs);
+                action(eventArgs);
             }
             else
             {
