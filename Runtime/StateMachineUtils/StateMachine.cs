@@ -8,7 +8,7 @@ namespace Cnoom.UnityTool.StateMachineUtils
     {
         protected Dictionary<T, IState> States = new Dictionary<T, IState>();
         private IState currentState;
-        private T currentStateId;
+        public T CurrentStateId {get; private set;}
         public T PreviousStateId { get; private set; }
         private Action<T, T> onStateChanged = (_, __) => { };
         public long FrameCountOfCurrentState = 1;
@@ -22,16 +22,16 @@ namespace Cnoom.UnityTool.StateMachineUtils
 
         public void ChangeState(T key)
         {
-            if(key.Equals(currentStateId)) return;
+            if(key.Equals(CurrentStateId)) return;
             if (States.TryGetValue(key, out var state))
             {
                 if (currentState != null && state.Condition())
                 {
                     currentState.Exit();
-                    PreviousStateId = currentStateId;
+                    PreviousStateId = CurrentStateId;
                     currentState = state;
-                    currentStateId = key;
-                    onStateChanged?.Invoke(PreviousStateId, currentStateId);
+                    CurrentStateId = key;
+                    onStateChanged?.Invoke(PreviousStateId, CurrentStateId);
                     FrameCountOfCurrentState = 1;
                     SecondsOfCurrentState = 0.0f;
                     currentState.Enter();
@@ -50,7 +50,7 @@ namespace Cnoom.UnityTool.StateMachineUtils
             {
                 PreviousStateId = t;
                 currentState = state;
-                currentStateId = t;
+                CurrentStateId = t;
                 FrameCountOfCurrentState = 0;
                 SecondsOfCurrentState = 0.0f;
                 state.Enter();
@@ -67,7 +67,7 @@ namespace Cnoom.UnityTool.StateMachineUtils
         public void Clear()
         {
             currentState = null;
-            currentStateId = default;
+            CurrentStateId = default;
             States.Clear();
         }
     }
