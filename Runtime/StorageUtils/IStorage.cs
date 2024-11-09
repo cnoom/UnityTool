@@ -99,6 +99,6 @@
         /// <summary>
         /// 获取当前的存储实例
         /// </summary>
-        public static IStorage Current { get; set; }
+        public static IStorage Current { get; set; } = new PlayerPrefsStorage();
     }
 }
