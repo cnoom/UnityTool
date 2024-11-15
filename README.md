@@ -54,7 +54,7 @@ int i =  s.GetInt(key:"yourkey",defaultVale:0)
 ## [EventUtil](Runtime/EventUtils)
 简易事件系统，目前实现一个类型事件系统
 - [TypeEventSystem](Runtime/EventUtils/TypeEventSystem.cs)
-类型事件系统,提供弱引用避免忘记取消订阅导致的问题
+类型事件系统
 
 ## [StateMachineUtils](Runtime/StateMachineUtils)
 简易状态机，支持链式调用增加状态
