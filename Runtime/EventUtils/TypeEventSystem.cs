@@ -7,7 +7,7 @@ namespace Cnoom.UnityTool.EventUtils
     /// <summary>
     /// 触发事件基类,可以在里面添加参数
     /// </summary>
-    public class EventArgBase
+    public interface EventArgBase
     {
 
     }
