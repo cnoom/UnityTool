@@ -39,6 +39,9 @@ int i =  s.GetInt(key:"yourkey",defaultVale:0)
 }
 ```
 
+## [LogUtils](RunTime/LogUtils) 输出工具库
+实现一个this.log输出类型的工具用来快速输出，默认输出白色警告输出黄色异常输出红色，支持自定义输出格式类型，默认输出格式为 "ClassName:message"
+
 ## [Extensions](Runtime/Extensions)
 常用类拓展，对应拓展类包含如下方法【以扩展类名区分】【待完善】
 - [ArrayExtension](Runtime/Extensions/ArrayExtension.cs) 清空数组为默认值，获取随机元素，统一设定为某个值
