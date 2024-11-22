@@ -43,6 +43,11 @@ namespace Cnoom.UnityTool.ActionUtils
             processors.Add(new Processor(action, milliseconds, DelayType.Milliseconds));
         }
 
+        public void ClearProcessors()
+        {
+            processors.Clear();
+        }
+
         private class Processor
         {
             private Action action;
