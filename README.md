@@ -16,7 +16,7 @@
 ## [SingletonUtils](Runtime/SingletonUtils) 单例工具库
 统一实现一个[ISingleton](Runtime/SingletonUtils/ISingleton.cs)接口,接口具有初始化和释放方法
 - [Singleton](Runtime/SingletonUtils/Singleton.cs)
-  普通单例,继承自[Singleton](Runtime/SingletonUtils/Singleton.cs)，使用时需要实现私有无参构造函数
+  普通单例,继承自[ISingleton](Runtime/SingletonUtils/ISingleton.cs)，使用时需要实现私有无参构造函数
 - [SingletonMono](Runtime/SingletonUtils/SingletonMono.cs)
   MonoBehaviour单例,具有一个控制释放切换场景时是否销毁的布尔字段 IsDestroyOnLoad
 ```c#
