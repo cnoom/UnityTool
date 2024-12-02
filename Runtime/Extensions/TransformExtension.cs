@@ -131,7 +131,7 @@ namespace Cnoom.UnityTool.Extensions
             {
                 return null;
             }
-            return current.parent.FindParentWithTag(tag);
+            return current.parent.FindParentWithTag(tag,true);
         }
         #endregion
     }
