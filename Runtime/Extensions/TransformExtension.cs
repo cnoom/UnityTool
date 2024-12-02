@@ -109,5 +109,30 @@ namespace Cnoom.UnityTool.Extensions
 
         #endregion
 
+        #region Parent
+        /// <summary>
+        /// 在当前Transform的父物体中查找指定标签的物体
+        /// </summary>
+        /// <param name="current"></param>
+        /// <param name="tag"></param>
+        /// <param name="includeSelf"></param>
+        /// <returns></returns>
+        public static Transform FindParentWithTag(this Transform current, string tag,bool includeSelf = false)
+        {
+            if(includeSelf)
+            {
+                if (current.CompareTag(tag))
+                {
+                    return current;
+                }    
+            }
+            
+            if (current.parent == null)
+            {
+                return null;
+            }
+            return current.parent.FindParentWithTag(tag);
+        }
+        #endregion
     }
 }

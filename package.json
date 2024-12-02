@@ -1,7 +1,7 @@
 ﻿{
   "name": "com.cnoom.unitytool",
   "displayName": "Unity Tool",
-  "version": "0.9.37",
+  "version": "0.9.38",
   "description": "较为全面且封装简单的unity库",
   "main": "index.js",
   "private": true,
