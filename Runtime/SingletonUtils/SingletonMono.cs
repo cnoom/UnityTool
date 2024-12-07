@@ -3,7 +3,7 @@ using Debug = System.Diagnostics.Debug;
 
 namespace Cnoom.UnityTool.SingletonUtils
 {
-    public abstract class SingletonMonoBehaviour<T> : MonoBehaviour, ISingletonMono where T : SingletonMonoBehaviour<T>
+    public abstract class SingletonMonoBehaviour<T> : MonoBehaviour, ISingleton where T : SingletonMonoBehaviour<T>
     {
         private static T instance;
         private static readonly object Lock = new object();
