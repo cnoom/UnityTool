@@ -8,8 +8,6 @@ namespace Cnoom.UnityTool.SingletonUtils
     {
         public static T CreateSingleton<T>() where T : class, ISingleton
         {
-            var type = typeof(T);
-
             var instance = CreateNonPublicConstructorObject<T>();
             instance.OnSingletonInit();
             return instance;

@@ -16,7 +16,6 @@ namespace Cnoom.UnityTool.SingletonUtils
                         if(instance == null)
                         {
                             instance = SingletonCreator.CreateSingleton<T>();
-                            instance.OnSingletonInit();
                         }
                     }
                 }
