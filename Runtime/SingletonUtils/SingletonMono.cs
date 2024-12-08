@@ -19,9 +19,9 @@ namespace Cnoom.UnityTool.SingletonUtils
                     {
                         if(instance == null)
                         {
-                            instance = FindObjectOfType<T>();
+                            instance = FindAnyObjectByType<T>();
 
-                            if(FindObjectOfType<T>() == null)
+                            if(instance == null)
                             {
                                 GameObject singleton = new GameObject();
                                 instance = singleton.AddComponent<T>();

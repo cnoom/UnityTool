@@ -1,10 +1,9 @@
 ﻿{
   "name": "com.cnoom.unitytool",
   "displayName": "Unity Tool",
-  "version": "0.9.40",
+  "version": "0.9.50",
   "description": "较为全面且封装简单的unity库",
   "main": "index.js",
-  "private": true,
   "author": {
     "name": "cnoom",
     "email": "cnoom@qq.com"

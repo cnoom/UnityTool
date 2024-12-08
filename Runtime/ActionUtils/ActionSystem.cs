@@ -12,7 +12,7 @@ namespace Cnoom.UnityTool.ActionUtils
 
         private readonly List<Processor> processors = new List<Processor>();
         private readonly List<Processor> processorsToRemove = new List<Processor>();
-        
+        public Action OnUpdate;
         private void Update()
         {
             processorsToRemove.AddRange(processors);
@@ -21,6 +21,8 @@ namespace Cnoom.UnityTool.ActionUtils
                 processors.Remove(p);
             }
             processorsToRemove.Clear();
+            
+            OnUpdate?.Invoke();
         }
 
         /// <summary>
