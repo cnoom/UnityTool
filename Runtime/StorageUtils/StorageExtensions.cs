@@ -70,5 +70,10 @@ namespace Cnoom.UnityTool.StorageUtils
         {
             TryGetStorageUtil().Delete(storageUser.GetKey(key));
         }
+        
+        public static bool Contains(this IStorageUser storageUser, string key)
+        {
+            return TryGetStorageUtil().Exists(storageUser.GetKey(key));
+        }
     }
 }
