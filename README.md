@@ -66,4 +66,7 @@ int i =  s.GetInt(key:"yourkey",defaultVale:0)
 ## [StateMachineUtils](Runtime/StateMachineUtils)
 简易状态机，支持链式调用增加状态
 
+## [MaterialUtils](Runtime/MaterialUtils)
+目前实现了根据材质偏移实现精灵/图片滚动效果的mono,需要修改贴图间拼接模式为重复,材质shader为unlit/Transparent
+
 
