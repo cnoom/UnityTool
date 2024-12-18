@@ -1,13 +1,33 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Cnoom.UnityTool.Extensions
 {
     public static class LinkedListExtension
     {
-        
+        /// <summary>
+        /// 遍历链表，直到满足条件
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="condition"></param>
+        /// <typeparam name="T"></typeparam>
+        public static void ForeachUntil<T>([NotNull] this LinkedList<T> list, [NotNull] Func<T, bool> condition)
+        {
+            LinkedListNode<T> current = list.First;
+            while (current != null)
+            {
+                if(condition(current.Value))
+                {
+                    // 满足条件，退出遍历
+                    break;
+                }
+                current = current.Next;
+            }
+        }
+
         #region Sort
-        
+
         /// <summary>
         /// 使用快速排序进行排序
         /// </summary>
@@ -79,7 +99,7 @@ namespace Cnoom.UnityTool.Extensions
             // 合并已排序的左右子链表回原链表
             MergeLinkedLists(leftHalf, rightHalf, self, comparer);
         }
-        
+
         /// <summary>
         /// 将链表均匀分割为两部分
         /// </summary>
@@ -143,6 +163,7 @@ namespace Cnoom.UnityTool.Extensions
                 rightNode = rightNode.Next;
             }
         }
+
         #endregion
     }
 }
