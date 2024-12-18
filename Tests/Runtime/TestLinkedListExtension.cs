@@ -146,10 +146,10 @@ public class LinkedListSortTest
         // 定义条件判断委托，当元素值等于3时满足条件
         Func<int, bool> condition = num => num == 3;
         // 定义要执行的操作委托，这里只是简单设置一个标记表示执行了操作
-        Action<int> action = num =>
+        Action<LinkedListNode<int>> action = num =>
         {
             actionExecuted = true;
-            Assert.AreEqual(3, num);
+            Assert.AreEqual(3, num.Value);
         };
 
         // 调用要测试的扩展方法
@@ -174,7 +174,7 @@ public class LinkedListSortTest
         // 定义条件判断委托，当元素值等于10时满足条件（这里故意设置一个不会满足的条件）
         Func<int, bool> condition = num => num == 10;
         // 定义要执行的操作委托，这里只是简单设置一个标记表示执行了操作
-        Action<int> action = num => actionExecuted = false;
+        Action<LinkedListNode<int>> action = num => actionExecuted = false;
 
         // 调用要测试的扩展方法
         startNode.ForeachUntil(condition, action);
@@ -198,7 +198,7 @@ public class LinkedListSortTest
         // 定义条件判断委托，当元素值等于10时满足条件（故意设置不满足的条件）
         Func<int, bool> condition = num => num == 10;
         // 定义要执行的操作委托，这里只是简单设置一个标记表示执行了操作
-        Action<int> action = num => actionExecuted = true;
+        Action<LinkedListNode<int>> action = num => actionExecuted = true;
 
         // 调用要测试的扩展方法
         startNode.ForeachUntil(condition, action);
@@ -216,7 +216,7 @@ public class LinkedListSortTest
         // 定义条件判断委托，随便设置一个条件（因为节点为null不应执行操作所以条件不重要）
         Func<int, bool> condition = num => num == 3;
         // 定义要执行的操作委托，这里只是简单设置一个标记表示执行了操作
-        Action<int> action = num => actionExecuted = true;
+        Action<LinkedListNode<int>> action = num => actionExecuted = true;
 
         try
         {

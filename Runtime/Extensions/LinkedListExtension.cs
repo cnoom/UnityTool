@@ -34,7 +34,7 @@ namespace Cnoom.UnityTool.Extensions
         /// <param name="condition"></param>
         /// <param name="action"></param>
         /// <typeparam name="T"></typeparam>
-        public static void ForeachUntil<T>([NotNull] this LinkedListNode<T> self, [NotNull] Func<T, bool> condition, [NotNull] Action<T> action)
+        public static void ForeachUntil<T>([NotNull] this LinkedListNode<T> self, [NotNull] Func<T, bool> condition, [NotNull] Action<LinkedListNode<T>> action)
         {
             if (self == null)
             {
@@ -46,7 +46,7 @@ namespace Cnoom.UnityTool.Extensions
             }
             if (self != null)
             {
-                action(self.Value);
+                action(self);
             }
         }
 
