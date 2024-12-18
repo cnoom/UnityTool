@@ -52,6 +52,7 @@ int i =  s.GetInt(key:"yourkey",defaultVale:0)
 - [BoolExtension](Runtime/Extensions/BoolExtension.cs) 布尔值转换为01，布尔值转换为一对相反数
 - [ComponentExtension](Runtime/Extensions/ComponentExtension.cs) 获取或添加指定类型的组件
 - [DictionaryExtension](Runtime/Extensions/DictionaryExtension.cs) 获取指定键的值，并将其转换为指定的子类型
+- [LinkedListExtension](Runtime/Extensions/LinkedListExtension.cs) 快速排序以及归并排序
 - [ListExtension](Runtime/Extensions/ListExtension.cs) 根据条件查找元素、移除元素，获取随机元素
 - [NumberExtension](Runtime/Extensions/NumberExtension.cs) 获取绝对值
 - [TransformExtension](Runtime/Extensions/TransformExtension.cs) 查找/添加指定路径子物体身上的组件，查找指定路径的子物体的特定某组件
