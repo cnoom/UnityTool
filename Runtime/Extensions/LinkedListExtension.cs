@@ -7,14 +7,14 @@ namespace Cnoom.UnityTool.Extensions
     public static class LinkedListExtension
     {
         /// <summary>
-        /// 遍历链表，直到满足条件
+        /// 遍历链表，直到满足条件后执行动作
         /// </summary>
-        /// <param name="list"></param>
+        /// <param name="self"></param>
         /// <param name="condition"></param>
         /// <typeparam name="T"></typeparam>
-        public static void ForeachUntil<T>([NotNull] this LinkedList<T> list, [NotNull] Func<T, bool> condition)
+        public static void ForeachUntil<T>([NotNull] this LinkedList<T> self, [NotNull] Func<T, bool> condition,[NotNull] Action<T> action)
         {
-            LinkedListNode<T> current = list.First;
+            LinkedListNode<T> current = self.First;
             while (current != null)
             {
                 if(condition(current.Value))
@@ -23,6 +23,30 @@ namespace Cnoom.UnityTool.Extensions
                     break;
                 }
                 current = current.Next;
+            }
+            if(current != null) action(current.Value);
+        }
+
+        /// <summary>
+        /// 从指定节点开始，遍历链表，直到满足条件后执行动作
+        /// </summary>
+        /// <param name="self"></param>
+        /// <param name="condition"></param>
+        /// <param name="action"></param>
+        /// <typeparam name="T"></typeparam>
+        public static void ForeachUntil<T>([NotNull] this LinkedListNode<T> self, [NotNull] Func<T, bool> condition, [NotNull] Action<T> action)
+        {
+            if (self == null)
+            {
+                throw new ArgumentNullException(nameof(self));
+            }
+            while (self!= null && !condition(self.Value))
+            {
+                self = self.Next;
+            }
+            if (self != null)
+            {
+                action(self.Value);
             }
         }
 
