@@ -1,4 +1,17 @@
-﻿{
-  "name": "Cnoom.UnityTool.Tests",
-  "references":[ "GUID:4f39af9085e346128eab60220543f904" ]
+{
+    "name": "Cnoom.UnityTool.Tests",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4f39af9085e346128eab60220543f904",
+        "GUID:dc04f38471c3a459fb4d31124ee9127d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

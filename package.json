@@ -18,6 +18,7 @@
   },
   "resolutionStrategy": "highest",
   "dependencies": {
-    "com.unity.nuget.newtonsoft-json": "3.2.1"
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.unity.test-framework": "1.4.5"
   }
 }
