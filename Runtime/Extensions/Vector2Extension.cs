@@ -102,5 +102,16 @@ namespace Cnoom.UnityTool.Extensions
         {
             return (self - other).magnitude;
         }
+
+        /// <summary>
+        /// 将Vector2转换为Vector3，z默认为0
+        /// </summary>
+        /// <param name="self"></param>
+        /// <param name="z"></param>
+        /// <returns></returns>
+        public static Vector3 ToVector3(this Vector2 self, float z = 0)
+        {
+            return new Vector3(self.x, self.y, z);
+        }
     }
 }

@@ -128,5 +128,10 @@ namespace Cnoom.UnityTool.Extensions
         {
             return Mathf.Sqrt(Distance2(self, other));
         }
+
+        public static Vector2 ToVector2(this Vector3 self)
+        {
+            return new Vector2(self.x, self.y);
+        }
     }
 }
