@@ -1,27 +1,44 @@
-﻿using UnityEngine;
+﻿using System;
 
 namespace Cnoom.UnityTool.Extensions
 {
     public static class NumberExtensions
     {
-        /// <summary>
-        /// 计算并返回指定浮点数的绝对值
-        /// </summary>
-        /// <param name="f">要计算绝对值的浮点数</param>
-        /// <returns>浮点数的绝对值</returns>
         public static float Abs(this float f)
         {
-            return Mathf.Abs(f);
+            return Math.Abs(f);
+        }
+        
+        public static int Abs(this int f)
+        {
+            return Math.Abs(f);
+        }
+
+        public static long Abs(this long l)
+        {
+            return Math.Abs(l);
         }
 
         /// <summary>
-        /// 计算并返回指定整数的绝对值
+        /// 将数值转换为k为单位的数值，保留两位小数
         /// </summary>
-        /// <param name="f">要计算绝对值的整数</param>
-        /// <returns>整数的绝对值</returns>
-        public static int Abs(this int f)
+        /// <param name="i"></param>
+        /// <returns></returns>
+        public static string ConvertToK(this int i)
         {
-            return Mathf.Abs(f);
+            double d = (double)i / 1000;
+            return d.ToString("0.00") + "k";
+        }
+        
+        /// <summary>
+        /// 将数值转换为k为单位的数值，保留两位小数
+        /// </summary>
+        /// <param name="l"></param>
+        /// <returns></returns>
+        public static string ConvertToK(this long l)
+        {
+            double d = (double)l / 1000;
+            return d.ToString("0.00") + "k";
         }
     }
 }
