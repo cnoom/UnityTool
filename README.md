@@ -70,4 +70,5 @@ int i =  s.GetInt(key:"yourkey",defaultVale:0)
 ## [MaterialUtils](Runtime/MaterialUtils)
 目前实现了根据材质偏移实现精灵/图片滚动效果的mono,需要修改贴图间拼接模式为重复,材质shader为unlit/Transparent
 
-
+## [MessageQueue](Runtime/MessageQueue)
+一个可以在遍历时可以向后插入或清空集合的集合(我称之为消息队列)
