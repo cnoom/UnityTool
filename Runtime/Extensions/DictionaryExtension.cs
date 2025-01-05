@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Cnoom.UnityTool.Extensions
 {
@@ -29,6 +30,11 @@ namespace Cnoom.UnityTool.Extensions
             value = default;
             // 返回 false 表示没有找到键或转换失败
             return false;
+        }
+
+        public static Dictionary<T1, T2> Clone<T1, T2>(this Dictionary<T1, T2> dictionary)
+        {
+            return dictionary.ToDictionary(item => item.Key, item => item.Value);
         }
     }
 }

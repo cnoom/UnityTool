@@ -69,5 +69,13 @@ namespace Cnoom.UnityTool.Extensions
         {
             return list[UnityEngine.Random.Range(0, list.Count)];
         }
+
+        /// <summary>
+        /// 克隆列表并返回新的列表。
+        /// </summary>
+        public static List<T> Clone<T>(this List<T> list)
+        {
+            return new List<T>(list);
+        }
     }
 }

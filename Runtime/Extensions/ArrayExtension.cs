@@ -39,5 +39,18 @@ namespace Cnoom.UnityTool.Extensions
         {
             return array[UnityEngine.Random.Range(0, array.Length)];
         }
+
+        /// <summary>
+        /// 克隆数组
+        /// </summary>
+        /// <param name="array"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static T[] Clone<T>(this T[] array)
+        {
+            T[] clone = new T[array.Length];
+            Array.Copy(array, clone, array.Length);
+            return clone;
+        }
     }
 }
