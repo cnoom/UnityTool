@@ -17,7 +17,9 @@ namespace Cnoom.UnityTool.MessageQueue
         private readonly LinkedList<T> messageList = new LinkedList<T>();
         private LinkedListNode<T> currentMessageNode;
         public Action OnFinish;
-
+        public Func<T,T, bool> Condition = DefaultCondition;
+        public static readonly Func<T,T,bool> DefaultCondition = (n1, n2) => n1.priority < n2.priority; 
+        
         public void Run()
         {
             isRunning = true;
@@ -35,7 +37,12 @@ namespace Cnoom.UnityTool.MessageQueue
                 messageList.AddLast(item);
                 return;
             }
-            currentMessageNode.Next.ForeachUntil(n => item.priority <= n.priority, message => { messageList.AddBefore(message, item); });
+
+            bool Func(T t) => Condition.Invoke(item, t);
+            if(!currentMessageNode.Next.ForeachUntil(Func, message => { messageList.AddBefore(message, item); }))
+            {
+                messageList.AddLast(item);
+            }
         }
 
         /// <summary>
