@@ -25,12 +25,17 @@ namespace Cnoom.UnityTool.MessageQueue
         }
 
         /// <summary>
-        /// 从当前消息向后插入一条消息
+        /// 从当前消息向后插入一条消息, 直到找到优先级小于等于他的消息停止
         /// </summary>
         /// <param name="item"></param>
         public void InsertAfter(T item)
         {
-            currentMessageNode.ForeachUntil(n => item.priority < n.priority, message => { messageList.AddAfter(message, item); });
+            if(currentMessageNode.Next == null)
+            {
+                messageList.AddLast(item);
+                return;
+            }
+            currentMessageNode.Next.ForeachUntil(n => item.priority <= n.priority, message => { messageList.AddBefore(message, item); });
         }
 
         /// <summary>
