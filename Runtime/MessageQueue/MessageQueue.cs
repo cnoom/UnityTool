@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cnoom.UnityTool.Extensions;
 
@@ -8,13 +9,14 @@ namespace Cnoom.UnityTool.MessageQueue
     /// 可以随时向后插入消息的消息队列
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class MessageQueue<T>  where T : IMessage
+    public class MessageQueue<T> where T : IMessage
     {
         public int count => messageList.Count;
         public bool isRunning { get; private set; }
 
         private readonly LinkedList<T> messageList = new LinkedList<T>();
         private LinkedListNode<T> currentMessageNode;
+        public Action OnFinish;
 
         public void Run()
         {
@@ -28,12 +30,9 @@ namespace Cnoom.UnityTool.MessageQueue
         /// <param name="item"></param>
         public void InsertAfter(T item)
         {
-            currentMessageNode.ForeachUntil(n => item.priority < n.priority, message =>
-            {
-                messageList.AddAfter(message, item);
-            });
+            currentMessageNode.ForeachUntil(n => item.priority < n.priority, message => { messageList.AddAfter(message, item); });
         }
-        
+
         /// <summary>
         /// 排序
         /// </summary>
@@ -77,6 +76,7 @@ namespace Cnoom.UnityTool.MessageQueue
             if(currentMessageNode.Next == null)
             {
                 isRunning = false;
+                OnFinish?.Invoke();
                 return;
             }
             HandleMessage(currentMessageNode.Next);

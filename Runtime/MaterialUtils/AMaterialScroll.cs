@@ -23,7 +23,7 @@ namespace Cnoom.UnityTool.MaterialUtils
         protected abstract Material GetMaterial();
         private Material material;
         private Vector2 lastOffset;
-
+        private bool isPause;
         protected virtual void Awake()
         {
             TryInitFollowPosition();
@@ -36,8 +36,19 @@ namespace Cnoom.UnityTool.MaterialUtils
 
         private void Update()
         {
+            if(isPause) return;
             TryAuto();
             TryFollow();
+        }
+
+        public void Pause()
+        {
+            isPause = true;
+        }
+
+        public void Resume()
+        {
+            isPause = false;
         }
 
         private void TryAuto()
