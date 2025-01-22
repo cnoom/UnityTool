@@ -32,6 +32,9 @@ namespace Cnoom.UnityTool.Extensions
             return false;
         }
 
+        /// <summary>
+        /// 浅拷贝
+        /// </summary>
         public static Dictionary<T1, T2> Clone<T1, T2>(this Dictionary<T1, T2> dictionary)
         {
             return dictionary.ToDictionary(item => item.Key, item => item.Value);

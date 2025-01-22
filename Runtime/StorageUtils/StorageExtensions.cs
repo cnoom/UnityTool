@@ -3,7 +3,7 @@ using System;
 
 namespace Cnoom.UnityTool.StorageUtils
 {
-    public static class StorageExtensions
+    public static class StorageUserExtensions
     {
         
         public static string GetKey(this IStorageUser storageUser, string key)
