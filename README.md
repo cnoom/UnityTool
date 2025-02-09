@@ -51,7 +51,7 @@ int i =  s.GetInt(key:"yourkey",defaultVale:0)
 - [ArrayExtension](Runtime/Extensions/ArrayExtension.cs) 清空数组为默认值，获取随机元素，统一设定为某个值
 - [BoolExtension](Runtime/Extensions/BoolExtension.cs) 布尔值转换为01，布尔值转换为一对相反数
 - [ComponentExtension](Runtime/Extensions/ComponentExtension.cs) 获取或添加指定类型的组件
-- [ColorExtension](Runtime/Extensions/ColorExtension.cs) 便捷颜色修改
+- [ColorExtension](Runtime/Extensions/ColorExtension.cs) 便捷颜色修改,转换为16进制
 - [DictionaryExtension](Runtime/Extensions/DictionaryExtension.cs) 获取指定键的值，并将其转换为指定的子类型
 - [LinkedListExtension](Runtime/Extensions/LinkedListExtension.cs) 快速排序以及归并排序,遍历直到满足条件
 - [ListExtension](Runtime/Extensions/ListExtension.cs) 根据条件查找元素、移除元素，获取随机元素
